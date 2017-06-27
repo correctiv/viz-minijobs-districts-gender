@@ -1,0 +1,35 @@
+{
+  "global": {
+    "cssNamespace": "mjgm",
+    "breakpoints": {
+      "small": 600,
+      "medium": 768,
+      "large": 1280
+    }
+  },
+  "historyChart": {
+    "keys": [
+      "pwi_h",
+      "pwa_h",
+      "pwn_h"
+    ],
+    "width": 300,
+    "height": 80,
+    "margin": {
+      "top": 10,
+      "right": 20,
+      "bottom": 20,
+      "left": 20
+    },
+    "xExtent": ["2003", "2016"],
+    "yExtent": [0, 15],
+    "yTickValues": [0, 5, 10, 15],
+    "labels": {
+      "u25": "bis 25",
+      "u35": "25-35",
+      "u45": "35-45",
+      "u55": "45-55",
+      "o55": "ab 55"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@include cssPrefix('districts-map') {
+
+  &-container {
+    display: block;
+    width: 100%;
+    padding-top: 80px;
+
+    @include bp-sm {
+      padding-top: 0;
+    }
+  }
+
+  display: block;
+  width: 100%;
+  position: relative;
+
+  @include bp-xs {
+    width: 50%;
+    float: left;
+
+    &__svg-wrapper {
+      padding-top: 20px;
+      padding-right: 30px;
+    }
+  }
+
+  @include bp-sm {
+    width: 39%;
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 24px;
+    font-family: $font-neuzeit;
+  }
+
+  &__subtitle {
+    color: $gray;
+    font-size: 18px;
+  }
+
+  &__path {
+    stroke: white;
+    stroke-width: 1px;
+
+    &.-hilight {
+      stroke-width: 4px;
+      stroke: $blue;
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+@include cssPrefix('selector') {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+
+  &.-visible {
+    height: 32px;
+    opacity: 1;
+    z-index: 15;
+    width: 80%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: $white;
+
+    @include reset-select;
+  }
+}

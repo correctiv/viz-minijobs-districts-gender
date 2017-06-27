@@ -1,0 +1,63 @@
+@include cssPrefix('searchbox') {
+  z-index: 10;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+
+  @include bp-sm {
+    position: absolute;
+    width: 30%;
+    top: 0px;
+    right: 0px;
+  }
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__selector-button {
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    padding: 2px 3px 2px 3px;
+
+    &.-active {
+      background-color: $purple-lighter;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 3px;
+    font-size: 15px;
+  }
+
+  &__result-list {
+    position: absolute;
+    top: 34px;
+    display: block;
+    width: 100%;
+    background-color: $white-transp;
+    box-shadow: $box-shadow;
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    z-index: 100;
+
+    &__item {
+      font-size: 14px;
+      cursor: pointer;
+      padding: 8px;
+      list-style: none;
+      @include transition(background-color, $transition-duration);
+
+      &:hover {
+        @include transition(background-color, $transition-duration);
+        background-color: $gray-light;
+      }
+    }
+  }
+
+}
