@@ -1,4 +1,5 @@
 // import './history-chart/history-chart.tag'
+import '../div-bars/comparison-full-bar.tag'
 
 <map-infobox if={ data } class="{ getClass() } { -visible: visible }">
 
@@ -18,7 +19,7 @@
 
   <section class={ getClass('section') }>
     <h4 class={ getClass('section__title') }>Anteil Minijobber</h4>
-    <p class={ getClass('annotation') }>Bezogen auf die Altersgruppe der 25 bis 65-Jährigen</p>
+    <p class={ getClass('annotation') }>Bezogen auf die Altersgruppe der 25 bis 65-Jährigen, die <strong>ausschließlich</strong> einer geringfügigen Beschäftigung nachgehen.</p>
     <dl>
       <dt>{ data.f_main_rel }&nbsp;%</dt>
       <dt class="-small">{ data.f_main }</dt>
@@ -34,6 +35,11 @@
       <dt class="-small">{ data.t_main }</dt>
       <dd class="badge badge--t">Gesamt</dd>
     </dl>
+    <comparison-full-bar
+      if={ barData }
+      ref='comparison-full-bar'
+      nolabels={ true }
+      values={ barData } />
     <span class="-clear-"></span>
   </section>
 
@@ -47,7 +53,11 @@
   this.data = {}
 
   riot.control.on(riot.EVT.updateInfobox, data => {
-    this.update({data, visible: true})
+    this.update({
+      data,
+      barData: this.getBarData(data),
+      visible: true
+    })
   })
 
   riot.control.on(riot.EVT.hideInfobox, () => {
@@ -55,5 +65,18 @@
   })
 
   this.close = () => this.update({visible: false})
+
+  this.getBarData = data => {
+    const cols = ['f_main_rel', 'm_main_rel']
+    const labels = ['Frauen', 'Männer']
+    const modifiers = ['f', 'm']
+    return cols.map((c, i) => {
+      return {
+        value: data[c],
+        label: labels[i],
+        modifier: modifiers[i]
+      }
+    })
+  }
 
 </map-infobox>

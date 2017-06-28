@@ -34,3 +34,7 @@ export {
   geoPath,
   geoMercator
 } from 'd3-geo'
+
+export {
+  sum
+} from 'd3-array'
