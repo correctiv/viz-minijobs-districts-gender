@@ -1,0 +1,113 @@
+@include cssPrefix('duration-viz-brd') {
+  display: block;
+  width: 100%;
+
+  .multi-bars {
+
+    &__legend {
+      display: block;
+      padding-bottom: 30px;
+
+      @include bp-sm {
+        margin-left: 25%;
+        padding-left: 15px;
+      }
+
+      .btn {
+        height: 40px;
+        margin-top: 20px;
+        display: block;
+
+        @media (min-width: $screen-sm / 1.5) {
+          display: inline;
+          margin-top: 0px;
+        }
+      }
+    }
+
+    &__button {
+      border: none;
+      transition: all .1s;
+
+      &:hover, &--active {
+        transition: all .1s;
+        border-radius: 5px;
+      }
+    }
+
+    &__table {
+      padding-top: 30px;
+    }
+
+    &__row {
+      clear: both;
+      min-height: 60px;
+      padding-bottom: 20px;
+    }
+
+    &__cell {
+
+      &--label {
+        width: 100%;
+        font-size: 16px;
+
+        strong {
+          font-size: 18px;
+        }
+
+        @include bp-sm {
+          width: 25%;
+          float: left;
+        }
+      }
+    }
+
+    &__chart {
+      height: 30px;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include bp-sm {
+        width: 75%;
+        float: left;
+        padding-left: 15px;
+      }
+    }
+
+    &__bar {
+      position: relative;
+      height: 30px;
+      float: left;
+      background-color: $gray;
+
+      &-label {
+        position: absolute;
+        left: 5px;
+        font-size: 12px;
+        font-family: $font-neuzeit;
+        font-weight: bold;
+        line-height: 30px;
+
+        @include bp-sm {
+          font-size: 14px;
+          left: 10px;
+        }
+      }
+
+      .--hide-sm {
+        display: none;
+        @include bp-sm {
+          display: inline;
+        }
+      }
+
+      .--hide-md {
+        display: none;
+        @include bp-md {
+          display: inline;
+        }
+      }
+    }
+  }
+
+}

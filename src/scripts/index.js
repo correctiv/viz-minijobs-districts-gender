@@ -23,6 +23,15 @@ riot.STORE.getActiveBreakpoint = getActiveBreakpoint
 import getClass from './mixins/class_name.js'
 riot.mixin(getClass(config.global.cssNamespace))
 
-// mount app
-import '../components/app.tag'
-riot.mount('[data-riot-mount="cor-mj-gender-map"]', 'cor-mj-gender-map')
+// mount vizes
+import '../components/districts-gender-map.tag'
+import '../components/duration-viz.tag'
+import {select} from './lib/d3.js'
+
+const mount = (name) => {
+  const selector = `[data-riot-mount="${name}"]`
+  select(selector).node() && riot.mount(selector, name)
+}
+
+mount('cor-mj-gender-durations')
+mount('cor-mj-gender-map')

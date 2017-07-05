@@ -9,6 +9,7 @@ const data = d3.csvParse(require('raw!../data/gender_main_group.csv'))
 
 const search = str => data.filter(d => d.name.toLowerCase().indexOf(str) > -1)
 
+const durationDataBrd = d3.csvParse(require('raw!../data/brd-durations.csv'))
 
 geoData.features.map(f => {
   f.id = f.properties.RS
@@ -23,6 +24,7 @@ geoData.features.map(f => {
 module.exports = {
   geoData,
   data,
-  search
+  search,
+  durationDataBrd
 }
 
