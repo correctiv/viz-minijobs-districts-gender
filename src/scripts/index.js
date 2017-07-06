@@ -14,10 +14,10 @@ import './riot_event_bus.js'
 const config = require('json!../config.json')
 
 // setup responsiveness
-import {getWindowWidth, getActiveBreakpointFunc} from './responsive.js'
-const getActiveBreakpoint = getActiveBreakpointFunc(config.global.breakpoints)
-riot.STORE.breakpoint = getActiveBreakpoint(getWindowWidth())
-riot.STORE.getActiveBreakpoint = getActiveBreakpoint
+// import {getWindowWidth, getActiveBreakpointFunc} from './responsive.js'
+// const getActiveBreakpoint = getActiveBreakpointFunc(config.global.breakpoints)
+// riot.STORE.breakpoint = getActiveBreakpoint(getWindowWidth())
+// riot.STORE.getActiveBreakpoint = getActiveBreakpoint
 
 // mixins
 import getClass from './mixins/class_name.js'
