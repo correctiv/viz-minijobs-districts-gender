@@ -1,0 +1,70 @@
+@include cssPrefix('grouped-bars') {
+
+  display: block;
+  width: 100%;
+  height: 400px;
+  position: relative;
+
+  &__group {
+    display: block;
+    float: left;
+    height: 100%;
+    padding: 0px 30px 50px 0px;
+    position: relative;
+
+    &__label {
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: -50px;
+
+      span {
+        height: 40px;
+        display: block;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: $font-neuzeit;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__bars-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__bar-outer {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    padding-right: 10px;
+  }
+
+  &__bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $gray;
+
+    &--f {
+      background-color: $female-color;
+    }
+
+    &--m {
+      background-color: $male-color;
+    }
+
+    &__label {
+      position: absolute;
+      top: -20px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+
+}

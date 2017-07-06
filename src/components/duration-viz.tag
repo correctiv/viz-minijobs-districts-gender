@@ -1,54 +1,32 @@
-import * as d3 from '../scripts/lib/d3.js'
 import {durationDataBrd} from '../scripts/data.js'
-import colors from './div-bars/get_gender_bars_colors.js'
-import './div-bars/bar-tooltip.tag'
+import './div-bars/grouped-bars-horizontal.tag'
 
-<cor-mj-gender-durations class={ getClass('duration-viz-brd') }>
+<cor-mj-gender-durations class={ getClass('duration-viz') }>
 
-  <div class="multi-bars__table">
-    <div each={ bars } class="multi-bars__row">
-      <div class="multi-bars__cell multi-bars__cell--label">
-        <strong>{ name }</strong><br>
-          <span class="annotation">{ sumAbsolute } insgesamt</span>
-      </div>
-      <div class="multi-bars__chart">
-        <div each={ bars }
-          onclick={ _onClick }
-          class="multi-bars__bar multi-bars__bar--{ modifier }"
-          style="width:{ width }%;background-color:{ color };">
-          <div class="multi-bars__bar-label { _getClass(width * 2) }">{ label }</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <h4 class={ getClass('duration-viz__headline') }>
+    Weniger Frauen als Männer machen Minijobs höchstens zwei Jahre lang.
+  </h4>
+  <grouped-bars-horizontal ref='grouped-bars-horizontal'
+    groups={ data.slice(0, 2) }
+    grouplabel='label'
+    labelformat={ labelformat }
+    cols={ ['f_rel', 'm_rel'] }
+    modifiers={ ['f', 'm'] }
+    initlegend={ ['Frauen', 'Männer'] }
+    scale=2.5
+  />
+  <h4 class={ getClass('duration-viz__headline') }>
+    Mehr Frauen als Männer arbeiten länger als zwei Jahre in Minijobs.
+  </h4>
+  <grouped-bars-horizontal ref='grouped-bars-horizontal'
+    groups={ data.slice(2) }
+    grouplabel='label'
+    labelformat={ labelformat }
+    cols={ ['f_rel', 'm_rel'] }
+    modifiers={ ['f', 'm'] }
+    scale=2.5
+  />
 
-  this.keys = ['f', 'm']
-  this.labels = ['Frauen', 'Männer']
-  this.bars = this.keys.map((k, i) => {
-    const name = this.labels[i]
-    const sumAbsolute = d3.sum(durationDataBrd.map(r => +r[k]))
-    const sum = d3.sum(durationDataBrd.map(r => +r[`${k}_rel`]))
-    const bars = durationDataBrd.map((r, i) => {
-      const width = +r[`${k}_rel`] / sum * 100
-      return {
-        width,
-        modifier: k,
-        color: colors[i+1],
-        label: i < 3 ? r.label : i < 5 ? `${i} - ${i+1}` : ''
-      }
-    }).sort((a, b) => +b.ordering - +a.ordering)
-    return {name, bars, sumAbsolute}
-  })
-
-  this._getClass = width => {
-    return width < 10 ? '--hide-md' : width < 15 ? '--hide-sm' : ''
-  }
-
-  this._onClick = ({item, x, y}) => {
-    // this.update({
-    //   toolti
-    // })
-  }
-
-
+  this.data = durationDataBrd
+  this.labelformat = v => v + ' %'
 </cor-mj-gender-durations>
