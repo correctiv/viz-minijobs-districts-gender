@@ -1,9 +1,8 @@
 import * as topojson from 'topojson'
 import * as d3 from './lib/d3.js'
 
-// const geoData = {}
-const geoSrcBrd = require('json!../data/landkreise_simplify200.topo.json')
-const geoData = topojson.feature(geoSrcBrd, geoSrcBrd.objects.landkreise_simplify200)
+const geoSrc = require('json!../data/landkreise_simplify200.topo.json')
+const geoData = topojson.feature(geoSrc, geoSrc.objects.landkreise_simplify200)
 
 const states = require('json!../data/states.json')
 const data = d3.csvParse(require('raw!../data/gender_main_group.csv'))
