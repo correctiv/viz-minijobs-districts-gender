@@ -24,8 +24,11 @@
         line-height: 16px;
         font-family: $font-neuzeit;
         font-weight: bold;
-        text-align: right;
-        padding-right: 10px;
+
+        @include bp-xs {
+          text-align: right;
+          padding-right: 10px;
+        }
       }
     }
   }
