@@ -1,4 +1,3 @@
-// import './history-chart/history-chart.tag'
 import '../div-bars/comparison-full-bar.tag'
 
 <map-infobox if={ data } class="{ getClass() } { -visible: visible }">
@@ -45,12 +44,6 @@ import '../div-bars/comparison-full-bar.tag'
     <span class="-clear-"></span>
   </section>
 
-  <section if={ supported } class={ getClass('section') + ' ' + getClass('section--last') }>
-    <h4 class={ getClass('section__title') }>Entwicklung seit 2003</h4>
-    <history-chart ref='history-chart' config={ opts.config.historyChart } data={ data } />
-  </section>
-  <span class="-clear-"></span>
-
   this.visible = false
   this.data = {}
 
@@ -69,7 +62,7 @@ import '../div-bars/comparison-full-bar.tag'
   this.close = () => this.update({visible: false})
 
   this.getBarData = data => {
-    const cols = ['f_main_rel', 'm_main_rel']
+    const cols = ['f_main', 'm_main']
     const labels = ['Frauen', 'Männer']
     const modifiers = ['f', 'm']
     return cols.map((c, i) => {
