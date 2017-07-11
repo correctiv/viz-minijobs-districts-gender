@@ -11,6 +11,8 @@ const search = str => data.filter(d => d.name.toLowerCase().indexOf(str) > -1)
 
 const durationDataBrd = d3.csvParse(require('raw!../data/brd-durations.csv'))
 
+const introData = require('json!../data/intro.json')
+
 geoData.features.map(f => {
   f.id = f.properties.RS
   const _data = data.find(d => d.id === f.id)
@@ -25,6 +27,7 @@ module.exports = {
   geoData,
   data,
   search,
-  durationDataBrd
+  durationDataBrd,
+  introData
 }
 

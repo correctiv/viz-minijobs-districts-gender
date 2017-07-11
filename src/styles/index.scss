@@ -5,7 +5,9 @@
 // components
 @import './main.scss';
 @import './components.scss';
+@import './colors.scss';
 @import './selector_reset.scss';
+@import '../components/intro-viz/intro-viz.scss';
 @import '../components/districts-map/districts-map.scss';
 @import '../components/map-infobox/map-infobox.scss';
 @import '../components/map-searchbox/map-searchbox.scss';
@@ -13,3 +15,4 @@
 @import '../components/map-searchbox/items-selector.scss';
 @import '../components/div-bars/comparison-full-bar.scss';
 @import '../components/div-bars/grouped-bars-horizontal.scss';
+@import '../components/div-bars/piktogram/piktogram-bar.scss';

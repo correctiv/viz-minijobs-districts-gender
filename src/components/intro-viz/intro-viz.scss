@@ -1,0 +1,50 @@
+@include cssPrefix('intro-viz') {
+  display: block;
+  width: 100%;
+
+  &__section {
+    display: block;
+    padding-bottom: 20px;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    h3 {
+      font-family: $font-neuzeit;
+    }
+  }
+
+  &__legend {
+    clear: both;
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+
+    &__entypo-svg svg {
+      width: 20px;
+      height: 20px;
+      fill: $gray;
+    }
+
+    &__item {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+
+      @include bp-xs {
+        display: inline-block;
+        width: 33%;
+      }
+
+      &-square {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+}

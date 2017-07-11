@@ -26,6 +26,7 @@ riot.mixin(getClass(config.global.cssNamespace))
 // mount vizes
 import '../components/districts-gender-map.tag'
 import '../components/duration-viz.tag'
+import '../components/intro-viz.tag'
 import {select} from './lib/d3.js'
 
 const mount = (name) => {
@@ -35,3 +36,4 @@ const mount = (name) => {
 
 mount('cor-mj-gender-durations')
 mount('cor-mj-gender-map')
+mount('cor-mj-gender-intro')
