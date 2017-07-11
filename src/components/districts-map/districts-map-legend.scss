@@ -1,0 +1,58 @@
+@include cssPrefix('districts-map-legend') {
+  display: block;
+  padding-top: 20px;
+
+  @include bp-xs {
+    width: 60%;
+  }
+
+  @include bp-sm {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 280px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      list-style: none;
+      display: inline-block;
+      font-size: 12px;
+      width: 12.5%;
+
+      // @include bp-sm {
+      //   display: block;
+      //   width: 100%;
+      //   position: relative;
+      //   text-align: right;
+      //   padding-right: 25px;
+      // }
+
+      span {
+        display: block;
+        height: 15px;
+        // opacity: .8;
+
+        // @include bp-sm {
+        //   display: inline-block;
+        //   width: 15px;
+        //   position: absolute;
+        //   right: 0px;
+        // }
+      }
+    }
+  }
+
+  &__annotation {
+    display: block;
+    font-size: 14px;
+
+    @include bp-sm {
+      text-align: right;
+    }
+  }
+
+}
