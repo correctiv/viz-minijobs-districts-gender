@@ -1,34 +1,14 @@
 @include cssPrefix('searchbox') {
-  z-index: 10;
   display: block;
-  margin-bottom: 10px;
   width: 100%;
-
-  @include bp-sm {
-    position: absolute;
-    width: 30%;
-    top: 0px;
-    right: 0px;
-  }
 
   &__input-wrapper {
     position: relative;
   }
 
-  &__selector-button {
-    position: absolute;
-    right: 3px;
-    top: 5px;
-    padding: 2px 3px 2px 3px;
-
-    &.-active {
-      background-color: $purple-lighter;
-    }
-  }
-
   &__input {
-    position: absolute;
     display: block;
+    height: 35px;
     width: 100%;
     padding: 3px;
     font-size: 15px;
@@ -47,11 +27,17 @@
     z-index: 100;
 
     &__item {
-      font-size: 14px;
+      font-size: 18px;
       cursor: pointer;
       padding: 8px;
       list-style: none;
       @include transition(background-color, $transition-duration);
+
+      span {
+        font-size: 14px;
+        display: block;
+        font-weight: bold;
+      }
 
       &:hover {
         @include transition(background-color, $transition-duration);

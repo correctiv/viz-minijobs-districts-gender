@@ -1,0 +1,22 @@
+@include cssPrefix('searchbox-container') {
+  display: block;
+  width: 100%;
+
+  @include bp-sm {
+    z-index: 9;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
+  }
+
+  &__selector-toggle {
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+}

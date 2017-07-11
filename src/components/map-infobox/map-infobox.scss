@@ -1,23 +1,10 @@
-// @import './history-chart/history-chart.scss';
-
 @include cssPrefix('infobox') {
 
-  // FIXME
-  // @include visible(&);
   display: none;
   z-index: 20;
-  // width: 0;
-  // display: block;
-  // height: 0;
-  // overflow: hidden;
-  // opacity: 0;
-  // @include transition(opacity, $transition-duration);
 
   &.-visible {
     display: block;
-    // min-height: 400px;
-    // opacity: 1;
-    // @include transition(opacity, $transition-duration);
   }
 
   background-color: $white-transp;
@@ -39,8 +26,8 @@
     position: absolute;
     box-shadow: none;
     border: 1px solid $gray-light;
-    width: 24%;
-    top: 40px;
+    width: 280px;
+    top: 70px;
     right: 0px;
     // bottom: 20px;
   }

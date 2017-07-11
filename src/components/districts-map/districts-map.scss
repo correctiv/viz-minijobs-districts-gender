@@ -3,10 +3,15 @@
   &-container {
     display: block;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 30px;
 
     @include bp-sm {
       padding-top: 0;
+      padding-right: 400px;
+    }
+
+    @include bp-md {
+      padding-right: 300px;
     }
   }
 
@@ -25,7 +30,13 @@
   }
 
   @include bp-sm {
-    width: 39%;
+    float: none;
+    width: 100%;
+  }
+
+  @include bp-md {
+    float: left;
+    width: 50%;
   }
 
   &__title {

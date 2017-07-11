@@ -1,19 +1,11 @@
 @include cssPrefix('selector') {
   display: block;
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
+  width: 100%;
+  background-color: $white;
 
-  &.-visible {
-    height: 32px;
-    opacity: 1;
-    z-index: 15;
-    width: 80%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background-color: $white;
-
-    @include reset-select;
+  select {
+    height: 35px;
   }
+
+  @include reset-select;
 }

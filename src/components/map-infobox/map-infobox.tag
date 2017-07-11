@@ -35,6 +35,8 @@ import '../div-bars/comparison-full-bar.tag'
       <dd class="badge badge--t">Gesamt</dd>
     </dl>
     <span class="-clear-"></span>
+  </section>
+  <section class={ getClass('section') }>
     <h4 class={ getClass('section__title') }>Verhältnis F/M</h4>
     <comparison-full-bar
       if={ barData }
