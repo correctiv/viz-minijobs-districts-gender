@@ -5,7 +5,7 @@ import unhilight from './unhilight_path.js'
 
 <districts-map class="{ getClass() } { getClass() }--{ opts.gender }">
 
-  <h3 class={ getClass('title') }>{ titles[opts.gender] }</h3>
+  <h4 class={ getClass('title') }>{ titles[opts.gender] }</h4>
   <span class={ getClass('subtitle') }>von 25 bis 65 Jahre</span>
   <div class={ getClass('svg-wrapper') } id="svg-map-{ opts.gender }" />
 
