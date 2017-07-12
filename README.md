@@ -1,5 +1,61 @@
 # viz-minijobs-districts-gender
 
+Display data about minijobs distribution across german districts and compare data between genders.
+
+[Preview via gh-pages](https://correctiv.github.io/viz-minijobs-districts-gender/dist/)
+
+Based on [wbkd/yet-another-webpack-es6-starterkit](https://github.com/wbkd/yet-another-webpack-es6-starterkit)
+
+Uses [d3](https://d3js.org) and [riotjs](https://riotjs.com)
+
+## base visualization setup for correctiv cms
+
+### javascript
+
+```
+dist/bundle.js
+```
+
+### styles
+
+```
+dist/styles/bundle.css
+```
+
+## for use in correctiv cms plugins:
+
+### intro piktograms
+
+```html
+<figure class="figure -paragraph-width">
+  <div class="figure__container">
+    <div data-riot-mount="cor-mj-gender-intro"></div>
+  </div>
+</figure>
+```
+
+### duration data bars
+
+```html
+<figure class="figure -paragraph-width">
+  <div class="figure__container">
+    <div data-riot-mount="cor-mj-gender-durations"></div>
+  </div>
+</figure>
+```
+
+### double german districts map
+
+```html
+<figure class="figure -full-width">
+  <h2>Vor allem für westdeutsche Frauen stellen Minijobs ein Problem dar</h2>
+  <div class="figure__container">
+    <div data-riot-mount="cor-mj-gender-map"></div>
+  </div>
+</figure>
+```
+
+
 ## Development
 
 ### Installation
