@@ -3,6 +3,18 @@ import './div-bars/grouped-bars-horizontal.tag'
 
 <cor-mj-gender-durations class={ getClass('duration-viz') }>
 
+  <comparison-piktogram
+    each={ introData }
+    title={ title }
+    symbol={ symbol }
+    unit={ unit }
+    labels={ labels }
+    data={ data }
+    width={ width }
+    leftovers={ leftovers }
+    modifier={ modifier }
+  />
+
   <h4 class={ getClass('duration-viz__headline') }>
     Weniger Frauen als Männer machen Minijobs höchstens zwei Jahre lang.
   </h4>
@@ -28,5 +40,6 @@ import './div-bars/grouped-bars-horizontal.tag'
   />
 
   this.data = durationDataBrd
+  this.introData = [durationDataBrd.intro]
   this.labelformat = v => v + ' %'
 </cor-mj-gender-durations>

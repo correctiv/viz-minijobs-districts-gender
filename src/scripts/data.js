@@ -10,6 +10,7 @@ const data = d3.csvParse(require('raw!../data/gender_main_group.csv'))
 const search = str => data.filter(d => d.name.toLowerCase().indexOf(str) > -1)
 
 const durationDataBrd = d3.csvParse(require('raw!../data/brd-durations.csv'))
+durationDataBrd.intro = require('json!../data/intro_duration.json')
 
 const introData = require('json!../data/intro.json')
 
@@ -28,6 +29,6 @@ module.exports = {
   data,
   search,
   durationDataBrd,
-  introData
+  introData,
 }
 
