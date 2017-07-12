@@ -10,6 +10,8 @@ import './intro-viz/comparison-piktogram.tag'
     unit={ unit }
     labels={ labels }
     data={ data }
+    width={ width }
+    leftovers={ leftovers }
     modifier={ modifier }
   />
 

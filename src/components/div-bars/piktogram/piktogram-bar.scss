@@ -20,6 +20,10 @@
     &--male svg {
       fill: $male-color;
     }
+
+    &--leftover svg {
+      fill: $gray-light;
+    }
   }
 
 }
