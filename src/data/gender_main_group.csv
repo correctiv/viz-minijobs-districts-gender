@@ -1,4 +1,4 @@
-id,state,name,t_total_pop,m_total_pop,f_total_pop,t_main_pop,t_main,t_main_rel,f_main_pop,f_main,f_main_rel,m_main_pop,m_main,m_main_rel
+id,s_id,name,t_total_pop,m_total_pop,f_total_pop,t_main_pop,t_main,t_main_rel,f_main_pop,f_main,f_main_rel,m_main_pop,m_main,m_main_rel
 01001,01,Flensburg,85942,42767,43175,45383,4054,8.9,21736,2487,11.4,23647,1567,6.6
 01002,01,Kiel,246306,119835,126471,137964,11458,8.3,68747,6853,10,69217,4605,6.7
 01003,01,Lübeck,216253,103683,112570,115788,7876,6.8,58697,5200,8.9,57091,2676,4.7

@@ -18,7 +18,7 @@ geoData.features.map(f => {
   f.id = f.properties.RS
   const _data = data.find(d => d.id === f.id)
   if (_data) {
-    _data.state = states[_data.state]
+    _data.state = states[_data.s_id]
     _data.fRatio = Math.round(_data.f_total_pop / _data.t_total_pop * 1000) / 10
     f.properties = _data
   } else f.__data_missing__ = true
