@@ -30,6 +30,9 @@ dist/styles/bundle.css
 <figure class="figure -paragraph-width">
   <div class="figure__container">
     <div data-riot-mount="cor-mj-gender-intro"></div>
+    <div class="figure__credits">
+      Daten: <a href="">Statistik der Bundesagentur für Arbeit: Geringfügig Beschäftigte nach Geschlecht und Altersgruppen</a>, eigene Berechnungen, Stand: 30.06.2016
+    </div>
   </div>
 </figure>
 ```
@@ -40,6 +43,10 @@ dist/styles/bundle.css
 <figure class="figure -paragraph-width">
   <div class="figure__container">
     <div data-riot-mount="cor-mj-gender-durations"></div>
+    <div class="figure__credits">
+      Daten: <a href="">Statistik der Minijob-Zentrale: Laufende geringfügige Beschäftigungsverhältnisse nach der Beschäftigungsdauer (bundesweit)</a>,<br>
+    eigene Berechnungen, Stand: 29.09.2016
+    </div>
   </div>
 </figure>
 ```
@@ -48,9 +55,13 @@ dist/styles/bundle.css
 
 ```html
 <figure class="figure -full-width">
-  <h2>Vor allem für westdeutsche Frauen stellen Minijobs ein Problem dar</h2>
+  <h2>Frauen und Männer in Deutschland, die einen Minijob als einzigen Job machen</h2>
   <div class="figure__container">
     <div data-riot-mount="cor-mj-gender-map"></div>
+  </div>
+  <div class="figure__credits">
+    Daten: <a href="">Statistik der Bundesagentur für Arbeit: Geringfügig Beschäftigte nach Geschlecht und Altersgruppen</a>,<br>
+    regionale Abgrenzung nach dem Arbeitsort, eigene Berechnungen, Stand: 30.06.2016
   </div>
 </figure>
 ```
