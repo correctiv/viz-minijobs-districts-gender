@@ -13,6 +13,12 @@
     width: 280px;
   }
 
+  @include bp-md {
+    left: 0;
+    width: 50%;
+    padding-right: 150px;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
@@ -49,9 +55,14 @@
   &__annotation {
     display: block;
     font-size: 14px;
+    font-weight: bold;
 
     @include bp-sm {
       text-align: right;
+    }
+
+    @include bp-md {
+      text-align: left;
     }
   }
 
