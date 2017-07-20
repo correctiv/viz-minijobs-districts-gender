@@ -1,1 +1,1 @@
-{"width": 3, "modifier": "break", "title": "Frauen machen l\u00e4nger einen Minijob als M\u00e4nner", "labels": ["Frauen: 942 Tage", "M\u00e4nner: 808 Tage"], "leftovers": [0, 0], "symbol": "calendar", "unit": "1 Monat", "data": [31, 27]}
+{"title": "Durschnittliche Dauer eines Minijob-Verh\u00e4ltnisses", "data": [31, 27], "modifier": "break", "symbol": "calendar", "leftovers": [0, 0], "unit": "1 Monat", "labels": ["Frauen: 942 Tage", "M\u00e4nner: 808 Tage"], "width": 3}
