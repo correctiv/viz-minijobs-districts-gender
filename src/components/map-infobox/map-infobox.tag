@@ -11,7 +11,7 @@ import '../div-bars/comparison-full-bar.tag'
     </section>
     <section class={ getClass('header__section') }>
       <span class={ getClass('population') }><strong>{ data.t_total_pop }</strong>&nbsp;Einwohner</span>
-      <span class={ getClass('f-ratio') }>davon <strong>{ data.fRatio }&nbsp;%</strong>&nbsp;Frauen</span>
+      <span class={ getClass('f-ratio') }>davon <strong>{ _f(data.fRatio) }&nbsp;%</strong>&nbsp;Frauen</span>
     </section>
     <span class="-clear-"></span>
   </header>
@@ -20,17 +20,17 @@ import '../div-bars/comparison-full-bar.tag'
     <h4 class={ getClass('section__title') }>Anteil Minijobber</h4>
     <p class={ getClass('annotation') }>Bezogen auf die Altersgruppe der 25 bis 65-Jährigen, die <strong>ausschließlich</strong> einer geringfügigen Beschäftigung nachgehen.</p>
     <dl>
-      <dt>{ data.f_main_rel }&nbsp;%</dt>
+      <dt>{ _f(data.f_main_rel) }&nbsp;%</dt>
       <dt class="-small">{ data.f_main }</dt>
       <dd class="badge badge--f">Frauen</dd>
     </dl>
     <dl>
-      <dt>{ data.m_main_rel }&nbsp;%</dt>
+      <dt>{ _f(data.m_main_rel) }&nbsp;%</dt>
       <dt class="-small">{ data.m_main }</dt>
       <dd class="badge badge--m">Männer</dd>
     </dl>
     <dl>
-      <dt>{ data.t_main_rel }&nbsp;%</dt>
+      <dt>{ _f(data.t_main_rel) }&nbsp;%</dt>
       <dt class="-small">{ data.t_main }</dt>
       <dd class="badge badge--t">Gesamt</dd>
     </dl>

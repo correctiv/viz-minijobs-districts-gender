@@ -41,5 +41,5 @@ import './div-bars/grouped-bars-horizontal.tag'
 
   this.data = durationDataBrd
   this.introData = [durationDataBrd.intro]
-  this.labelformat = v => v + ' %'
+  this.labelformat = v => this._f(v) + ' %'
 </cor-mj-gender-durations>
