@@ -38,3 +38,8 @@ export {
 export {
   sum
 } from 'd3-array'
+
+export {
+  format,
+  formatLocale,
+} from 'd3-format'

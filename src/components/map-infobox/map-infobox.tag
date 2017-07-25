@@ -10,7 +10,7 @@ import '../div-bars/comparison-full-bar.tag'
       <h3 class={ getClass('title') }>{ data.name }</h3>
     </section>
     <section class={ getClass('header__section') }>
-      <span class={ getClass('population') }><strong>{ data.t_total_pop }</strong>&nbsp;Einwohner</span>
+      <span class={ getClass('population') }><strong>{ _f(data.t_total_pop) }</strong>&nbsp;Einwohner</span>
       <span class={ getClass('f-ratio') }>davon <strong>{ _f(data.fRatio) }&nbsp;%</strong>&nbsp;Frauen</span>
     </section>
     <span class="-clear-"></span>
@@ -21,17 +21,17 @@ import '../div-bars/comparison-full-bar.tag'
     <p class={ getClass('annotation') }>Von allen 25- bis 65-Jährigen des jeweiligen Geschlechts gehen einer <strong>ausschließlich</strong> geringfügigen Beschäftigung nach:</p>
     <dl>
       <dt>{ _f(data.f_main_rel) }&nbsp;%</dt>
-      <dt class="-small">{ data.f_main }</dt>
+      <dt class="-small">{ _f(data.f_main) }</dt>
       <dd class="badge badge--f">Frauen</dd>
     </dl>
     <dl>
       <dt>{ _f(data.m_main_rel) }&nbsp;%</dt>
-      <dt class="-small">{ data.m_main }</dt>
+      <dt class="-small">{ _f(data.m_main) }</dt>
       <dd class="badge badge--m">Männer</dd>
     </dl>
     <dl>
       <dt>{ _f(data.t_main_rel) }&nbsp;%</dt>
-      <dt class="-small">{ data.t_main }</dt>
+      <dt class="-small">{ _f(data.t_main) }</dt>
       <dd class="badge badge--t">Gesamt</dd>
     </dl>
     <span class="-clear-"></span>
