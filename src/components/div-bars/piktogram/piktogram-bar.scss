@@ -1,6 +1,13 @@
 @include cssPrefix('piktogram-bar') {
 
   display: block;
+  margin-bottom: 20px;
+
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
 
   &--break {
     clear: both;
