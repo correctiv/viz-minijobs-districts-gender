@@ -18,7 +18,7 @@ import '../div-bars/comparison-full-bar.tag'
 
   <section class={ getClass('section') }>
     <h4 class={ getClass('section__title') }>Anteil Minijobber</h4>
-    <p class={ getClass('annotation') }>Bezogen auf die Altersgruppe der 25 bis 65-Jährigen, die <strong>ausschließlich</strong> einer geringfügigen Beschäftigung nachgehen.</p>
+    <p class={ getClass('annotation') }>Von allen 25- bis 65-Jährigen des jeweiligen Geschlechts gehen einer <strong>ausschließlich</strong> geringfügigen Beschäftigung nach:</p>
     <dl>
       <dt>{ _f(data.f_main_rel) }&nbsp;%</dt>
       <dt class="-small">{ data.f_main }</dt>
