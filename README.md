@@ -24,15 +24,21 @@ dist/styles/bundle.css
 
 ## for use in correctiv cms plugins:
 
-### intro piktograms
+### piktogram
 
 ```html
 <figure class="figure -paragraph-width">
   <div class="figure__container">
     <div data-riot-mount="cor-mj-gender-intro"></div>
-    <div class="figure__credits">
-      Daten: <a href="">Statistik der Bundesagentur für Arbeit: Geringfügig Beschäftigte nach Geschlecht und Altersgruppen</a>, eigene Berechnungen, Stand: 30.06.2016
-    </div>
+    <figcaption class="figure__caption">
+      <div class="figure__title">
+        Frauen und Männer zwischen 25 und 65 Jahren, die einen Minijob als einzigen Job
+        machen, verglichen mit allen Minijobbern.
+      </div>
+      <div class="figure__credits">
+        <a href="https://correctiv.org/a/1861">Daten</a>, Stand: 30.06.2016
+      </div>
+    </figcaption>
   </div>
 </figure>
 ```

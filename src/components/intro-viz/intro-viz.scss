@@ -23,20 +23,33 @@
     width: 100%;
     padding-top: 10px;
 
-    &__entypo-svg svg {
-      width: 20px;
-      height: 20px;
-      fill: $gray;
+    &__entypo-svg {
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $gray;
+      }
+
+      &--f svg {
+        fill: $female-color;
+      }
+
+      &--m svg {
+        fill: $male-color;
+      }
     }
 
     &__item {
       display: block;
       width: 100%;
       font-size: 14px;
+      margin-bottom: 5px;
 
       @include bp-xs {
-        display: inline-block;
-        width: 33%;
+        &--inline {
+          width: 33%;
+          display: inline-block;
+        }
       }
 
       &-square {

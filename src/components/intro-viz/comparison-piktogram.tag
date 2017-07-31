@@ -2,11 +2,7 @@ import '../div-bars/piktogram/piktogram-bar.tag'
 import '../div-bars/piktogram/entypo/entypo-svg.tag'
 
 <comparison-piktogram>
-
   <section class={ _getClass('section') }>
-
-    <h3>{ opts.title }</h3>
-
     <piktogram-bar
       ref='piktogram-bar'
       symbol={ opts.symbol }
@@ -28,10 +24,15 @@ import '../div-bars/piktogram/entypo/entypo-svg.tag'
 
     <section class={ _getClass('legend') }>
       <div class={ _getClass('legend__item') }>
-        <entypo-svg symbol={ opts.symbol } class={ _getClass('legend__entypo-svg') }/>
+        <entypo-svg symbol={ opts.symbol } class={ _getClass('legend__entypo-svg', 'f') }/> +
+        <entypo-svg symbol={ opts.symbol } class={ _getClass('legend__entypo-svg', 'm') }/> +
+        <entypo-svg symbol={ opts.symbol } class={ _getClass('legend__entypo-svg') }/> =
         { opts.unit }
       </div>
-      <div class={ _getClass('legend__item') } each={ d, i in opts.data }>
+      <div class={ _getClass('legend__item') }>
+        <em>davon machen so viele 25- bis 65-Jährige ihren Minijob als einzigen Job:</em>
+      </div>
+      <div class={ _getClass('legend__item', 'inline') } each={ d, i in opts.data }>
         <span class="{ _getClass('legend__item-square') } -bg--{ ['f', 'm'][i] }"></span>
         { parent.opts.labels[i] }
       </div>
@@ -39,5 +40,5 @@ import '../div-bars/piktogram/entypo/entypo-svg.tag'
 
   </section>
 
-  this._getClass = c => this.getClass(`intro-viz__${c}`)
+  this._getClass = (c, m) => this.getClass(`intro-viz__${c}`, m)
 </comparison-piktogram>
