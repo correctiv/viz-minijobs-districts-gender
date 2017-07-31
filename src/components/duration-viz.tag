@@ -1,10 +1,10 @@
 import {durationDataBrd} from '../scripts/data.js'
 import './div-bars/grouped-bars-horizontal.tag'
-import './intro-viz/comparison-piktogram.tag'
+import './intro-viz/duration-piktogram.tag'
 
 <cor-mj-gender-durations class={ getClass('duration-viz') }>
 
-  <comparison-piktogram
+  <duration-piktogram
     each={ introData }
     title={ title }
     symbol={ symbol }
